@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegraph Web App</title>
+</head>
+<body>
+    <h1>Welcome to the Telegraph Web App</h1>
+    <script>
+        const socket = io("http://localhost:3000");
+        socket.on("productUpdated", (data) => {
+            console.log("Product Updated:", data);
+        });
+    </script>
+</body>
+</html>
